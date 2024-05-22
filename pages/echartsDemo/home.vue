@@ -1,6 +1,9 @@
 <template>
 	<view class="content">
 		<view class="card">
+			<Text></Text>
+		</view>
+		<view class="card">
 			<ECharts1></ECharts1>
 		</view>
 		<view class="card">
@@ -17,8 +20,8 @@
 	} from 'vue'
 	import ECharts1 from './echart1.vue';
 	import ECharts2 from './echart2.vue';
-	import Footer from '../../components/footer.vue'
-	import * as echarts from 'echarts'
+	import Text from './text.vue';
+	import Footer from '../components/footer.vue'
 
 	const activeItem = ref('1')
 
@@ -33,7 +36,7 @@
 
 	.card {
 		width: calc(100% - 24px);
-		height: 450px;
+	/* 	height: 330px; */
 		margin: 12px;
 		border: 1px solid #e3e3e3;
 		border-radius: 8px;

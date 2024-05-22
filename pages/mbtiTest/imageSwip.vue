@@ -14,7 +14,7 @@
 		ref,
 		onMounted
 	} from 'vue'
-	import Footer from '../../components/footer.vue'
+	import Footer from '../components/footer.vue'
 	const activeItem = ref('0')
 	const imgList = [
 		'https://img95.699pic.com/photo/50161/5020.jpg_wh300.jpg',

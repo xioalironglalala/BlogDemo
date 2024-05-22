@@ -8,7 +8,7 @@
 		ref,
 		onMounted
 	} from 'vue'
-	import Footer from '../../components/footer.vue'
+	import Footer from '../components/footer.vue'
 	const activeItem = ref('2')
 </script>
 

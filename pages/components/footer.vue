@@ -29,19 +29,19 @@
 	
 	function goTest() {
 		uni.navigateTo({
-			url: './mbtiTest/imageSwip'
+			url: '/pages/mbtiTest/imageSwip'
 		});
 	}
 
 	function goEchart() {
 		uni.navigateTo({
-			url: './echartsDemo/home'
+			url: '/pages/echartsDemo/home'
 		});
 	}
 
 	function goMine() {
 		uni.navigateTo({
-			url: './poppyInfo/index'
+			url: '/pages/poppyInfo/index'
 		});
 	}
 </script>
