@@ -1,0 +1,36 @@
+{
+	"pages": [{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "Poppy"
+			}
+		},
+		{
+			"path": "pages/echartsDemo/home",
+			"style": {
+				"navigationBarTitleText": "Demo1"
+			}
+		},
+		{
+			"path": "pages/poppyInfo/index",
+			"style": {
+				"navigationBarTitleText": "Info"
+			}
+		},
+		{
+			"path": "pages/mbtiTest/imageSwip",
+			"style": {
+				"navigationBarTitleText": "轮播图"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8",
+		"app-plus": {
+			"background": "#efeff4"
+		}
+	}
+}
