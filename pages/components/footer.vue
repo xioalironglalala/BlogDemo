@@ -1,19 +1,15 @@
 <template>
 	<view class="footer">
-		<view class="footer-item" :class="{footerActive:activeItem=='0'}" @click="goTest">
-			<uni-icons v-if="activeItem=='0'" type="fire" size="30" color="red"></uni-icons>
-			<uni-icons v-else type="fire" size="30"></uni-icons>
-			<text>测试</text>
+		<view class="footer-items">
+			<view v-for="(item, index) in footerItems" :key="index" class="footer-item"
+				:class="{ footerActive: activeItem === index.toString() }" @click="item.handler">
+				<uni-icons :type="item.icon" size="30"
+					:color="activeItem === index.toString() ? 'red' : ''"></uni-icons>
+				<text>{{ item.label }}</text>
+			</view>
 		</view>
-		<view class="footer-item" :class="{footerActive:activeItem=='1'}" @click="goEchart">
-			<uni-icons v-if="activeItem=='1'" type="color" size="30" color="red"></uni-icons>
-			<uni-icons v-else type="color" size="30"></uni-icons>
-			<text>demo</text>
-		</view>
-		<view class="footer-item" :class="{footerActive:activeItem=='2'}" @click="goMine">
-			<uni-icons v-if="activeItem=='2'" type="contact" size="30" color="red"></uni-icons>
-			<uni-icons v-else type="contact" size="30"></uni-icons>
-			<text>我的</text>
+		<view class="circle-box">
+			<uni-icons type="plusempty" size="40" color="white"></uni-icons>
 		</view>
 	</view>
 </template>
@@ -25,8 +21,8 @@
 
 	const props = defineProps({
 		activeItem: String
-	})
-	
+	});
+
 	function goTest() {
 		uni.navigateTo({
 			url: '/pages/mbtiTest/imageSwip'
@@ -44,9 +40,38 @@
 			url: '/pages/poppyInfo/index'
 		});
 	}
+
+	function goBlog() {
+		uni.navigateTo({
+			url: '/pages/blog/index'
+		});
+	}
+
+	// 存储每个 footer-item 的数据
+	const footerItems = [{
+			icon: 'fire',
+			label: '测试',
+			handler: goTest
+		},
+		{
+			icon: 'color',
+			label: 'demo',
+			handler: goEchart
+		},
+		{
+			icon: 'flag',
+			label: '博客',
+			handler: goBlog
+		},
+		{
+			icon: 'contact',
+			label: '我的',
+			handler: goMine
+		},
+	];
 </script>
 
-<style>
+<style scoped>
 	.footer {
 		position: fixed;
 		bottom: 0;
@@ -55,10 +80,15 @@
 		height: 100rpx;
 		background-color: #fff;
 		display: flex;
-		flex-direction: row;
 		justify-content: space-around;
 		align-items: center;
 		border-top: 1px solid #eee;
+	}
+
+	.footer-items {
+		display: flex;
+		flex: 1;
+		justify-content: space-around;
 	}
 
 	.footer-item {
@@ -66,10 +96,26 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		position: relative;
 	}
 
 	.footerActive {
 		color: red;
-		fill: red
+		fill: red;
+	}
+
+	/* 圆形盒子样式 */
+	.circle-box {
+		width: 3.5rem;
+		height: 3.5rem;
+		background-color: #ff5a5f;
+		border-radius: 50%;
+		position: absolute;
+		top: -24px;
+		left: 50%;
+		transform: translateX(-50%);
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 </style>

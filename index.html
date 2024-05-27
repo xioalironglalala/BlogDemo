@@ -9,7 +9,7 @@
 				'<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0' +
 				(coverSupport ? ', viewport-fit=cover' : '') + '" />')
 			// 处理 Uncaught ReferenceError: global is not defined 的问题
-			if (window.global === undefined) {
+			if (typeof global === 'undefined') {
 				window.global = window;
 			}
 		</script>

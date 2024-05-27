@@ -1,7 +1,10 @@
 <template>
 	<view class="content">
 		<view class="card">
-			<Text></Text>
+			<TextInfo></TextInfo>
+		</view>
+		<view class="card">
+			<Ciyun></Ciyun>
 		</view>
 		<view class="card">
 			<ECharts1></ECharts1>
@@ -18,9 +21,10 @@
 		ref,
 		onMounted
 	} from 'vue'
+	import Ciyun from './ciyun.vue';
 	import ECharts1 from './echart1.vue';
 	import ECharts2 from './echart2.vue';
-	import Text from './text.vue';
+	import TextInfo from './text.vue';
 	import Footer from '../components/footer.vue'
 
 	const activeItem = ref('1')
@@ -36,10 +40,10 @@
 
 	.card {
 		width: calc(100% - 24px);
-	/* 	height: 330px; */
+		/* 	height: 330px; */
 		margin: 12px;
 		border: 1px solid #e3e3e3;
-		border-radius: 8px;
+		border-radius: 6px;
 		box-shadow: 0 0 8px #e3e3e3;
 	}
 </style>

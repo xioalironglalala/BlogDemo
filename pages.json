@@ -14,13 +14,25 @@
 		{
 			"path": "pages/poppyInfo/index",
 			"style": {
-				"navigationBarTitleText": "Info"
+				"navigationBarTitleText": "个人中心"
 			}
 		},
 		{
 			"path": "pages/mbtiTest/imageSwip",
 			"style": {
 				"navigationBarTitleText": "轮播图"
+			}
+		},
+		{
+			"path": "pages/blog/index",
+			"style": {
+				"navigationBarTitleText": "博客"
+			}
+		},
+		{
+			"path": "pages/blog/blogDetail",
+			"style": {
+				"navigationBarTitleText": ""
 			}
 		}
 	],
