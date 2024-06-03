@@ -5,7 +5,6 @@
 			<span v-for="item,index in match">{{index}}:{{data[item]}}</span>
 		</div>
 		<div class="content"><rich-text :nodes="data.content"></rich-text></div>
-
 	</view>
 </template>
 
@@ -16,6 +15,7 @@
 		computed,
 	} from 'vue'
 	import request from '@/utils/request';
+	import 'quill/dist/quill.snow.css';
 	import {
 		onLoad
 	} from '@dcloudio/uni-app';
@@ -28,7 +28,7 @@
 	let params = {}
 	const match = ref({
 		作者: 'creator_name',
-		最后更新时间: 'update_time'
+		最后更新时间: 'update_datetime'
 	})
 
 	onLoad((options) => {
@@ -57,15 +57,16 @@
 	.blog {
 		padding: 20rpx;
 		background: #fff;
-		height: 100vh;
+		height: calc(100vh - 44px);
+		box-sizing: border-box;
+		display: flex;
+		flex-direction: column;
 	}
 
 	.title {
-		/* font-size: 24rpx; */
 		font-weight: bold;
 		color: #333;
 		margin-bottom: 20rpx;
-		/* text-align: center; */
 	}
 
 	.blog-info {
@@ -81,5 +82,7 @@
 
 	.content {
 		margin: 12px;
+		flex: 1;
+		overflow: scroll;
 	}
 </style>

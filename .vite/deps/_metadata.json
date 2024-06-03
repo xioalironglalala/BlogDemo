@@ -1,0 +1,13 @@
+{
+  "hash": "aecae625",
+  "browserHash": "c39f80fc",
+  "optimized": {
+    "quill": {
+      "src": "../../node_modules/quill/quill.js",
+      "file": "quill.js",
+      "fileHash": "28acbd72",
+      "needsInterop": false
+    }
+  },
+  "chunks": {}
+}

@@ -7,6 +7,7 @@ import {
 import {
 	useAuthStore
 } from '@/stores/auth.js';
+import NoData from '@pages/components/noData.vue'
 
 Vue.config.productionTip = false
 
@@ -16,6 +17,7 @@ const pinia = createPinia();
 const app = new Vue({
 	...App
 })
+app.component('NoData', NoData);
 app.use(pinia);
 app.$mount()
 // #endif
@@ -28,9 +30,11 @@ import {
 	createPinia
 } from 'pinia';
 import App from './App.vue'
+import NoData from './pages/components/noData.vue'
 export function createApp() {
 	const app = createSSRApp(App)
 	const pinia = createPinia();
+	app.component('NoData', NoData);
 	app.use(pinia);
 	return {
 		app,

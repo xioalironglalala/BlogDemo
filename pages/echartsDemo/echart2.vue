@@ -75,12 +75,11 @@
 <style scoped>
 	.card-title {
 		padding: 6px 12px;
-		background-color: #87d7ff3d;
-		border-radius: 8px 8px 0 0;
+		background-color: #94bcff;
 	}
 
 	.charts-box {
-		width: 100%;
+	/* 	width: 100%; */
 		/* height: 300px; */
 	}
 </style>

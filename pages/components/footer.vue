@@ -8,7 +8,7 @@
 				<text>{{ item.label }}</text>
 			</view>
 		</view>
-		<view class="circle-box">
+		<view class="circle-box" @click="addBlog">
 			<uni-icons type="plusempty" size="40" color="white"></uni-icons>
 		</view>
 	</view>
@@ -45,6 +45,12 @@
 		uni.navigateTo({
 			url: '/pages/blog/index'
 		});
+	}
+
+	function addBlog() {
+		uni.navigateTo({
+			url: '/pages/blog/addBlog'
+		})
 	}
 
 	// 存储每个 footer-item 的数据
@@ -106,12 +112,12 @@
 
 	/* 圆形盒子样式 */
 	.circle-box {
-		width: 3.5rem;
-		height: 3.5rem;
+		width: 100rpx;
+		height: 100rpx;
 		background-color: #ff5a5f;
 		border-radius: 50%;
 		position: absolute;
-		top: -24px;
+		top: -14px;
 		left: 50%;
 		transform: translateX(-50%);
 		display: flex;

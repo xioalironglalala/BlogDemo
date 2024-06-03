@@ -35,15 +35,16 @@
 <style scoped>
 	.content {
 		width: 100vw;
-		height: 100vh;
+		height: calc(100vh - 92px);
+		background-color: #fff;
+		overflow-y: scroll;
+		overflow-x: hidden;
 	}
 
 	.card {
 		width: calc(100% - 24px);
-		/* 	height: 330px; */
 		margin: 12px;
 		border: 1px solid #e3e3e3;
-		border-radius: 6px;
-		box-shadow: 0 0 8px #e3e3e3;
+		box-shadow: 0 0 5px #e3e3e3;
 	}
 </style>
